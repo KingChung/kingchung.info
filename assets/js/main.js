@@ -1,8 +1,21 @@
 require(
 	[
-		'backbone'
+		'underscore',
+		'backbone',
+		'text!templates/main.html'
 	]
-	, function(Backbone){
-		console.log(Backbone);
+	, function(_, Backbone, ViewTemplate){
+		return Backbone.View.extend({
+			template: _.template(ViewTemplate),
+			initialize: function(){
+				
+			},
+			events: {
+
+			},
+			serialize: function(){
+
+			}
+		})
 	}
 )
